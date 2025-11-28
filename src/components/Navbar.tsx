@@ -3,6 +3,7 @@ import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/hooks/useCart";
+import logo from "@/assets/RV-Logo.png"
 
 export const Navbar = () => {
   const location = useLocation();
@@ -22,7 +23,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-0">
   <img
-    src="src/assets/RV-Logo.png"
+    src= {logo}
     alt="RV Naturals Logo"
     className="h-10 w-auto brightness-125 contrast-125"
   />
