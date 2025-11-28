@@ -61,7 +61,7 @@ const About = () => {
       </section>
 
       {/* Our Promise */}
-      <section className="py-16 px-4 bg-accent/30">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <Card className="card-elegant overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
@@ -118,7 +118,7 @@ const About = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 px-4 gradient-hero">
+      <section className="py-16 px-4">
         <div className="container mx-auto text-center space-y-6 max-w-3xl">
           <h2 className="text-4xl font-display font-bold">Join the Natural Beauty Movement</h2>
           <p className="text-xl text-muted-foreground">

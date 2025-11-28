@@ -8,6 +8,10 @@ import ingredientsImg from "@/assets/ingredients.jpg";
 import facewashImg from "@/assets/facewash.jpg";
 import serumImg from "@/assets/serum.jpg";
 import creamImg from "@/assets/cream.jpg";
+import serumUsage from "@/assets/serum-usage.jpg";
+import facewashUsage from "@/assets/facewash-usage.jpg";
+import creamUsage from "@/assets/cream-usage.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const Index = () => {
   const benefits = [
@@ -89,7 +93,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 bg-card">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -108,7 +112,7 @@ const Index = () => {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 px-4 gradient-hero">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-display font-bold">See The Difference</h2>
@@ -159,7 +163,7 @@ const Index = () => {
       </section>
 
       {/* Special Offers */}
-      <section className="py-16 px-4 bg-accent/30">
+      <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-display font-bold mb-4">Special Offers</h2>
@@ -191,6 +195,61 @@ const Index = () => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Product Usage Carousel */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-display font-bold mb-4">How To Use Our Products</h2>
+            <p className="text-xl text-muted-foreground">See our natural products in action</p>
+          </div>
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              <CarouselItem>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={serumUsage} 
+                    alt="Using Natural Serum"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                    <h3 className="text-white text-2xl font-display font-bold mb-2">Radiance Boost Serum</h3>
+                    <p className="text-white/90">Apply gently to clean skin for maximum absorption</p>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={facewashUsage} 
+                    alt="Using Natural Facewash"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                    <h3 className="text-white text-2xl font-display font-bold mb-2">Natural Glow Facewash</h3>
+                    <p className="text-white/90">Gentle cleansing for refreshed, glowing skin</p>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={creamUsage} 
+                    alt="Using Natural Cream"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-8">
+                    <h3 className="text-white text-2xl font-display font-bold mb-2">Nourishing Day Cream</h3>
+                    <p className="text-white/90">Deep hydration and protection throughout the day</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
